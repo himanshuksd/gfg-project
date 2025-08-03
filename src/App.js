@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+// functional componeent
+
+
+
+const Button = () =>  <button> Submit Button </button>
+
+const Search = () => <input placeholder='search your fav product...'/>
+
+
+function MyButton() {
+  return(
+    <>
+    <p> My button component </p> 
+    <button>submit button </button>  
+    <div><Search/></div>
+    </>
+  )
+}
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Hello my name is prakash</h1> 
+     <MyButton />
     </div>
+    
+    </>
   );
 }
 
