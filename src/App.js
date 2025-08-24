@@ -4,22 +4,39 @@ import './App.css';
 
 // functional componeent
 
+var count = 0;
+
+var inputText = '';
+
+function App() {
+
+  const handleIncrementClick = () => {
+    count = count + 1;
+    console.log({count});
+  }
+    
+  const onSearchChange = (event) => {
+    console.log(event.target.value);
+    inputText = event.target.value;
+
+  }
 
 
-const Header = () => {
   return (
-    <div style = { {backgroundColor: 'gray' ,display:'flex' } }>
-  <h1 className='h1'>Shopify app</h1>
-  <input placeholder='search'/>
-  <ul style ={{display:'flex'}}>
-    <li>Home</li>
-    <li>about</li>
-    <li>contact</li>
-  </ul>
-
-    </div>
-  )
+    <>
+    <h1>JSX</h1>
+    <button id ='btn' onClick= {handleIncrementClick}>Increment</button>
+    {count}
+    <div> <input onChange = {onSearchChange} placeholder='Search....' /></div>
+    {inputText}
+   
+    </>
+  );
 }
+
+
+
+
 
 
 /*function MyButton() {
@@ -31,10 +48,6 @@ const Header = () => {
     </>
   )
 }*/
-function App() {
-  return (
-      <Header/>
-  );
-}
+
 
 export default App;
