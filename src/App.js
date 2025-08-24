@@ -6,12 +6,23 @@ import './App.css';
 
 
 
-const Button = () =>  <button> Submit Button </button>
+const Header = () => {
+  return (
+    <div style = { {backgroundColor: 'gray' ,display:'flex' } }>
+  <h1 className='h1'>Shopify app</h1>
+  <input placeholder='search'/>
+  <ul style ={{display:'flex'}}>
+    <li>Home</li>
+    <li>about</li>
+    <li>contact</li>
+  </ul>
 
-const Search = () => <input placeholder='search your fav product...'/>
+    </div>
+  )
+}
 
 
-function MyButton() {
+/*function MyButton() {
   return(
     <>
     <p> My button component </p> 
@@ -19,16 +30,10 @@ function MyButton() {
     <div><Search/></div>
     </>
   )
-}
+}*/
 function App() {
   return (
-    <>
-    <div className="App">
-     <h1>Hello my name is prakash</h1> 
-     <MyButton />
-    </div>
-    
-    </>
+      <Header/>
   );
 }
 
