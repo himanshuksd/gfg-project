@@ -1,3 +1,11 @@
-.h1{
-  color:white;
+.h1 {
+  color: #ffff;
+}
+
+.pd-8px{
+  margin:8px;
+}
+
+.bg-color{
+  background-color: gray;
 }
