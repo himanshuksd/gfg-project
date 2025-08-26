@@ -4,31 +4,34 @@ import './App.css';
 
 // functional componeent
 
-var count = 0;
+const isAdmin = true;
 
-var inputText = '';
+const isLoading = false;
+
+function Loader () {
+  return (
+    <h3>Loading......</h3>
+  )
+}
 
 function App() {
 
-  const handleIncrementClick = () => {
-    count = count + 1;
-    console.log({count});
-  }
-    
-  const onSearchChange = (event) => {
-    console.log(event.target.value);
-    inputText = event.target.value;
-
-  }
+ 
+  
 
 
   return (
     <>
-    <h1>JSX</h1>
-    <button id ='btn' onClick= {handleIncrementClick}>Increment</button>
-    {count}
-    <div> <input onChange = {onSearchChange} placeholder='Search....' /></div>
-    {inputText}
+   <h1>Hello and welcome</h1>
+   {
+    isAdmin ? <h2>This is the Admin Portal </h2> : <h2> This is the User Portal </h2>
+
+   }
+   {
+    isLoading ? <h3>Page Loaded</h3> : <Loader/>
+   }
+   <h2> This is the Admin Portal </h2>
+   <h3> This is the User Portal </h3>
    
     </>
   );
@@ -50,4 +53,4 @@ function App() {
 }*/
 
 
-export default App;
+export default App; 
